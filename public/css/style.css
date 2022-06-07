@@ -1,0 +1,192 @@
+/* This is main css file  */
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+  height: 80px;
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 15px 0px 10px 0px;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+
+#header.header-scrolled,
+#header.header-pages {
+  height: 60px;
+  padding: 10px 0;
+}
+
+#header .logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #00366f;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+
+  max-height: 47px;
+}
+
+.main-pages {
+  margin-top: 60px;
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Desktop Navigation */
+
+.main-nav,
+.main-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav > ul > li {
+  position: relative;
+  white-space: nowrap;
+  float: left;
+}
+
+.main-nav a {
+  display: block;
+  position: relative;
+  color: black;
+  padding: 10px 15px;
+  transition: 0.3s;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.main-nav a:hover,
+.main-nav .active > a,
+.main-nav li:hover > a {
+  color: #fa9c3b;
+  text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+
+#intro {
+  width: 100%;
+  position: relative;
+  background: url("../images/in.jpg") center bottom no-repeat;
+  background-size: cover;
+  padding: 60px 0 100px 0;
+  height:80vh;
+}
+#about {
+ 
+  width: 100%;
+  position: relative;
+  padding: 50px 0 50px 0; 
+}
+#aboutpage {
+ 
+  width: 100%;
+  position: relative;
+  padding: 0px 0 50px 0; 
+}
+#home {
+  width: 100%;
+  position: relative;
+  padding: 60px 0 100px 0;
+ 
+}
+#intro .intro-info {
+  width: 100%;
+  text-align:center;
+    margin-top:180px;
+}
+
+#intro .intro-info h2 {
+  color: #2b015b;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#intro .intro-info h2 span {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+  background-color:black;    
+  padding: 0 0 30px 0;
+  color: #eee;
+  font-size: 14px;
+  }
+  #footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+  }
+  #footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #2b015b;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+  
+  #footer .footer-top .social-links a:hover {
+    background: #efb42f;
+    color: #fff;
+  }
+  
+  
+  /* Back to top button */
+  .back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+}
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+  #header {
+    height: 60px;
+    padding: 10px 0;
+  }
+}
