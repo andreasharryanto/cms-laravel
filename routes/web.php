@@ -34,6 +34,7 @@ Route::get('/editUser/{userid}', [UserController::class, 'editUser'])->name('edi
 Route::post('/submitEditUser', [UserController::class, 'submitEditUser'])->name('submitEditUser');
 
 Route::post('/searchContent', [ContentController::class, 'searchContent'])->name('searchContent');
+Route::post('/addContent', [ContentController::class, 'addContent'])->name('addContent');
 Route::get('/deleteContent/{cid}', [ContentController::class, 'deleteContent'])->name('deleteContent');
 Route::get('/editContent/{cid}', [ContentController::class, 'editContent'])->name('editContent');
 
