@@ -48,10 +48,27 @@ class ContentController extends Controller
     }
 
     function editContent($cid){
-        var_dump($cid);
+        $content = Content::find($cid);
+
+        $contents = Content::where('navBarDisplay', 'y')->where('priv', '<=', session('priv') ?? 0)->get();
+        return view('editContent', ['contents' => $contents, 'content' => $content]);
     }
     
     function submitEditContent(Request $request){
+        $content = Content::find($request->id);
+        $content->title = $request->title;
+        $content->h1 = $request->h1;
+        $content->content = $request->content;
+        $content->link = $request->link;
+        $content->navBarText = $request->navBarText;
+        $content->includes = $request->includes;
+        $content->priv = $request->priv;
+        $content->navBarDisplay = $request->navBarDisplay;
+        $content->active = $request->active;
+        $content->save();
 
+        $successMsg = "Records Inserted Successfully";
+        $contents = Content::where('navBarDisplay', 'y')->where('priv', '<=', session('priv') ?? 0)->get();
+        return view('pageManagement', ['contents' => $contents, 'successMessage' => $successMsg]);
     }
 }

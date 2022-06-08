@@ -37,6 +37,7 @@ Route::post('/searchContent', [ContentController::class, 'searchContent'])->name
 Route::post('/addContent', [ContentController::class, 'addContent'])->name('addContent');
 Route::get('/deleteContent/{cid}', [ContentController::class, 'deleteContent'])->name('deleteContent');
 Route::get('/editContent/{cid}', [ContentController::class, 'editContent'])->name('editContent');
+Route::post('/submitEditContent', [ContentController::class, 'submitEditContent'])->name('submitEditContent');
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
